@@ -1,4 +1,5 @@
-/* ============== COMMON STYLES ============== */
+/* ========== COMMON STYLES =========== */
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
@@ -55,14 +56,14 @@ img {
 }
 
 .container {
-  width: 1158px;
+  width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .container-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .section-title {
@@ -73,16 +74,35 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
+
 /* ========== COMMON STYLES =========== */
-/* ============== HEADER ============== */
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+}
+
+/* ============== /MOBILE HEADER STYLES ============== */
 
 .header {
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .page-navigation {
@@ -90,112 +110,66 @@ img {
   align-items: center;
 }
 
-.container-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .logo {
   color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  padding: 17.5px 0;
 }
 
 .logo-studio {
   color: #2e2f42;
 }
 
-.menu {
-  display: flex;
-  gap: 40px;
+.mobile-menu-open-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
 }
 
-.menu-link {
-  display: flex;
-  color: #2e2f42;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* ============== /MOBILE HEADER STYLES ============== */
+/* ============== /MOBILE HERO STYLES ============== */
 
-.menu-link-studio {
-  color: #404bbf;
-  position: relative;
-}
-
-.menu-link-studio::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 48px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
-
-.menu-link:hover,
-.menu-link:focus {
-  color: #404bbf;
-}
-
-.contacts {
-  font-style: normal;
-  display: flex;
-  align-items: center;
-}
-
-.contacts-list {
-  display: flex;
-  gap: 40px;
-}
-
-.contacts-link {
-  color: #434455;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
-  color: #404bbf;
-}
-
-/* ============== HERO 1 SECTION ============== */
 .main-section {
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero/hero-bg.jpg');
-  max-width: 1440px;
+    url('../images/hero/hero-bg-mobile.jpg');
+  max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .main-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg-mobile@2x.jpg');
+  }
+}
+
 .main-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
-  max-width: 496px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  max-width: 220px;
   margin: 0 auto;
 }
 
@@ -207,7 +181,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  margin: 48px auto 0;
+  margin: 72px auto 0;
   min-width: 169px;
   height: 56px;
   border: none;
@@ -220,59 +194,43 @@ img {
   background-color: #404bbf;
 }
 
-/* ============== HERO 1 SECTION ============== */
-/* ============== BENEFITS 2 SECTION ============== */
+/* ============== /MOBILE HERO STYLES ============== */
+/* ============== /MOBILE BENEFITS STYLES ============== */
 
 .container-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
-  margin-bottom: 8px;
-}
-
-.benefits-list {
-  display: flex;
-  gap: 24px;
-}
-
-.benefits-list-item {
-  width: calc((100% - 72px) / 4);
+  display: none;
 }
 
 .benefits-list-title {
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
 
 .benefits-list-text {
-  color: #434455;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-weight: 500;
 }
 
-/* ============== BENEFITS 2 SECTION ============== */
-/* ============== OUR TEAM 3 SECTION ============== */
+.benefits-list {
+  display: flex;
+  gap: 72px;
+  flex-direction: column;
+}
+
+/* ============== /MOBILE BENEFITS STYLES ============== */
+/* ============== /MOBILE OUR TEAM STYLES ============== */
 
 .our-team-section {
   background: #f4f4fd;
 }
 
-.our-team-title {
-  margin-bottom: 72px;
-}
-
 .our-team-list-item {
+  width: 264px;
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -281,7 +239,10 @@ img {
 
 .our-team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 72px;
 }
 
 .container-team-title-text {
@@ -299,10 +260,6 @@ img {
 }
 
 .our-team-list-text {
-  color: #434455;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 8px;
 }
@@ -338,22 +295,20 @@ img {
   fill: #f4f4fd;
 }
 
-/* ============== OUR TEAM 3 SECTION ============== */
-/* ============== OUR PORTFOLIO 4 SECTION ============== */
-
-.our-portfolio-title {
-  margin-bottom: 72px;
-}
+/* ============== /MOBILE OUR TEAM STYLES ============== */
+/* ============== /MOBILE PORTFOLIO STYLES ============== */
 
 .our-portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
+  justify-content: center;
 }
 
 .our-portfolio-list-item {
-  width: calc((100% - 48px) / 3);
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -363,33 +318,8 @@ img {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.overlay {
-  position: relative;
-  overflow: hidden;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  padding: 40px 32px;
-  background-color: #4d5ae5;
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.our-portfolio-list-item:hover .overlay-text {
-  transform: translateY(0%);
-}
-
 .container-portfolio-title-text {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
   border-top: none;
 }
 
@@ -402,15 +332,8 @@ img {
   margin-bottom: 8px;
 }
 
-.our-portfolio-list-text {
-  color: #434455;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-/* ============== OUR PORTFOLIO 4 SECTION ============== */
-/* ============== FOOTER ============== */
+/* ============== /MOBILE PORTFOLIO STYLES ============== */
+/* ============== /MOBILE FOOTER STYLES ============== */
 
 .footer {
   background: #2e2f42;
@@ -419,15 +342,13 @@ img {
 
 .container-footer {
   display: flex;
-  align-items: baseline;
-}
-
-.container-footer-logo {
-  margin-right: 120px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo-footer {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
   color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
@@ -443,23 +364,27 @@ img {
 }
 
 .footer-text {
+  display: flex;
+  justify-content: center;
   color: #f4f4fd;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   width: 264px;
 }
 
+.container-footer-logo {
+  margin-bottom: 72px;
+}
+
 .footer-social-media {
+  display: flex;
+  justify-content: center;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
 }
 
 .footer-social-list-icon {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -484,45 +409,53 @@ img {
   background-color: #31d0aa;
 }
 
-.footer-subscribe-container {
-  margin-left: 80px;
+.footer-social-media-container {
+  margin-bottom: 72px;
 }
 
-.footer-subscribe-text {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  margin-bottom: 16px;
+.footer-subscribe-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-subscribe-text {
+  display: flex;
+  justify-content: start;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .footer-subscribe-form-label-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
   color: #ffffff;
   border: 1px solid #ffffff;
   background-color: transparent;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: 0.04em;
   padding-left: 16px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  opacity: 0.3;
 }
 
 .footer-subscribe-form-label-input::placeholder {
   color: #ffffff;
+  opacity: 0.6;
 }
 
 .footer-subscribe-form-label-button {
-  min-width: 165px;
+  width: 165px;
   height: 40px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -542,8 +475,7 @@ img {
 .footer-button-icon {
   margin-left: 16px;
 }
-
-/* ============== /FOOTER  ============== */
+/* ============== /MOBILE FOOTER STYLES ============== */
 /* ============== BACKDROP STYLES ============== */
 
 .backdrop {
@@ -574,11 +506,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -756,3 +688,455 @@ img {
 }
 
 /* ============== /MODAL WINDOW STYLES ============== */
+/* ============== /MOBILE MENU STYLES ============== */
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.mobile-menu-wrapper.is-open {
+  transform: translateX(0%);
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 72px;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close-btn:hover,
+.mobile-menu-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #2e2f42;
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  padding-bottom: 168px;
+}
+
+.mobile-menu-link-studio {
+  color: #404bbf;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: #404bbf;
+}
+
+.mobile-contacts {
+  font-style: normal;
+  padding-bottom: 48px;
+}
+
+.mobile-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #434455;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-contacts-link-phone {
+  color: #4d5ae5;
+}
+
+.mobile-contacts-link:hover,
+.mobile-contacts-link:focus {
+  color: #404bbf;
+}
+
+.mobile-social-list-icon {
+  display: flex;
+  gap: 40px;
+}
+
+/* ============== /MOBILE MENU STYLES ============== */
+
+@media screen and (max-width: 1157px) {
+  .overlay-text {
+    display: none;
+  }
+}
+
+/* ============== TABLET HEADER STYLES ============== */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
+  .header {
+    max-width: 768px;
+  }
+
+  .mobile-menu-open-btn {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 120px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-link {
+    display: flex;
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link-studio {
+    color: #404bbf;
+    position: relative;
+  }
+
+  .menu-link-studio::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: #404bbf;
+  }
+
+  .contacts {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+  }
+
+  .contacts-link {
+    color: #434455;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contacts-link:hover,
+  .contacts-link:focus {
+    color: #404bbf;
+  }
+
+  /* ============== TABLET HERO STYLES ============== */
+
+  .main-section {
+    padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg-tablet.jpg');
+    max-width: 768px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .main-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero/hero-bg-tablet@2x.jpg');
+    }
+  }
+
+  .main-title {
+    font-size: 56px;
+    line-height: 1.07;
+    text-transform: none;
+    max-width: 496px;
+  }
+
+  .button-order-services {
+    margin: 36px auto 0;
+  }
+
+  /* ============== TABLET HERO STYLES ============== */
+  /* ============== TABLET BENEFITS STYLES ============== */
+
+  .benefits-list-title {
+    text-align: left;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .benefits-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  /* ============== TABLET BENEFITS STYLES ============== */
+  /* ============== TABLET OUR TEAM STYLES ============== */
+  .our-team-list {
+    flex-direction: row;
+    gap: 64px 24px;
+    justify-content: center;
+  }
+
+  /* ============== TABLET OUR TEAM STYLES ============== */
+  /* ============== TABLET OUR PORTFOLIO ============== */
+
+  .our-portfolio-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .our-portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  /* ============== TABLET OUR PORTFOLIO ============== */
+  /* ============== TABLET FOOTER ============== */
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 24px;
+    padding-left: 108px;
+  }
+
+  .logo-footer {
+    justify-content: flex-start;
+  }
+
+  .footer-social-media {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-subscribe-form-label-input {
+    width: 264px;
+  }
+
+  /* ============== TABLET FOOTER ============== */
+  /* ============== TABLET BACKDROP ============== */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+  /* ============== TABLET BACKDROP ============== */
+}
+/* ============== DESKTOP HEADER STYLES ============== */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
+
+  .header {
+    max-width: 1440px;
+  }
+
+  .logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  /* ============== DESKTOP HEADER STYLES ============== */
+  /* ============== DESKTOP HERO STYLES ============== */
+
+  .main-section {
+    padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg.jpg');
+    max-width: 1440px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .main-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero/hero-bg@2x.jpg');
+    }
+  }
+
+  .button-order-services {
+    margin: 48px auto 0;
+  }
+
+  /* ============== DESKTOP HERO STYLES ============== */
+  /* ============== DESKTOP BENEFITS STYLES ============== */
+
+  .container-section {
+    padding: 120px 0;
+  }
+
+  .container-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+  }
+
+  .benefits-list-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.12;
+  }
+
+  .benefits-list-text {
+    font-weight: 400;
+  }
+
+  .benefits-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ============== DESKTOP BENEFITS STYLES ============== */
+
+  .benefits-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ============== DESKTOP BENEFITS STYLES ============== */
+  /* ============== DESKTOP OUR TEAM STYLES ============== */
+
+  .our-team-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ============== DESKTOP OUR TEAM STYLES ============== */
+  /* ============== DESKTOP OUR PORTFOLIO STYLES ============== */
+
+  .our-portfolio-list {
+    row-gap: 48px;
+  }
+
+  .our-portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .our-portfolio-list-item:hover .overlay-text {
+    transform: translateY(0%);
+  }
+
+  /* ============== DESKTOP OUR PORTFOLIO STYLES ============== */
+
+  .container-footer {
+    align-items: baseline;
+    gap: 0;
+  }
+
+  .container-footer-logo {
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+
+  .footer-social-media-container {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .footer-subscribe-form-label-input {
+    opacity: 1;
+  }
+
+  /* ============== DESKTOP OUR FOOTER STYLES ============== */
+}
